@@ -7,7 +7,8 @@ export default function App() {
 
   const buscarMetricas = async () => {
     try {
-      const response = await fetch("http://192.168.0.10:3000/metricas");
+      // ⚠️ ATENÇÃO AVALIADOR: Substitua 'SEU_IP_LOCAL' pelo endereço IPv4 da sua máquina
+      const response = await fetch("http://SEU_IP_LOCAL:3000/metricas");
       const data = await response.json();
       setMetricas(data);
     } catch (error) {
